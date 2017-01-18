@@ -8,8 +8,6 @@ import java.io.IOException;
 
 /**
  * Main class to run a program
- * Create and initialize parser, view, controller objects
- * run controller process() method
  */
 public class Main {
     public static void main(String[] args) throws IOException {

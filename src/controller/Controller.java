@@ -30,16 +30,14 @@ public class Controller {
 
     /**
      * Main method to process entire program
-     * read properties to get text and words files
+     * read properties to get text file
      * print welcome message
      * parse text from file
      * print entire text
-     * divide text into sentences
-     * parse words from file
-     * print entire word list
-     * obtain word \ sentence and word \ text info
+     * parse words from text
+     * obtain  word : text info
+     * print words in frequency descending order
      * @see #countWord(CounterWordDecorator)
-     * sort words and print sorted list of words
      * @exception IOException - if occur - display appropriate message and exit program
      */
     @SuppressWarnings("unchecked")
@@ -55,7 +53,7 @@ public class Controller {
             System.exit(0);
         }
         view.print(View.PARSING_WORDS);
-        parser.parseSentences();      
+        parser.parseWords();      
         parser.setDecoratedWords(parser.sortDecoratedWords(parser.getDecoratedWords()));
         view.print(View.SORTED_WORDS);
         countWords();
@@ -65,7 +63,7 @@ public class Controller {
     //Utility methods
 
     /**
-     * A method to display word \ text info
+     * A method to display word : text info
      * @param word specified word
      */
     private void countWords(){

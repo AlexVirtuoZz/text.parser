@@ -124,7 +124,7 @@ public class Parser {
      * Split entire text into String array (temporary sentences)
      * For each string - divide it into words and add to sentences list
      */
-    public void parseSentences() {
+    public void parseWords() {
     	List<String> temp = split(text, Regex.SENTENCE_DELIMETERS);
         for (String sent: temp){
             for (String word : sent.split(Regex.WORDS_DELIMETERS)){

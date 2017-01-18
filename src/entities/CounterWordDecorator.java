@@ -44,7 +44,7 @@ public class CounterWordDecorator extends Word implements Comparable {
     public int compareTo(Object o) {
         CounterWordDecorator temp = (CounterWordDecorator) o;
         if (temp.getEntireCounter() == this.getEntireCounter())
-        	return this.toString().compareTo(temp.toString());
+        	return this.toString().toLowerCase().compareTo(temp.toString().toLowerCase());
         return temp.getEntireCounter() - this.getEntireCounter();
     }
     
